@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tailwind UI Clone</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="C:\Users\Inazawa Electronics\OneDrive\Desktop\DevTown\Projects\Tailwind UI\styles.css">
+
+        <style>
+            @media only screen and (min-width: 768px) {
+                img.mt-16 {
+                    height: 570px; width: 570px;
+                        }
+                }
+        </style>
+    </head>
+
+    <body>
+        
+    <!-- <header>
+        <nav class="flex py-8 px-28">
+            <div>
+                <img src="data:image/png;base64,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" alt="" class="h-9 w-auto">
+            </div>
+            
+            <div class="ml-auto">
+                <ul class="flex-2 text-center font-semibold text-m">
+                    <li class="list-none inline-block px-5"><a href="" class="px-2">Components</a></li>
+                    <li class="list-none inline-block"><a href="" class="">Templates</a></li>
+                        <div class="inline-block"">
+                            <button class="ml-2 hidden rounded-full bg-sky-500 px-1.5 py-0.5 text-xs text-white sm:block">New</button>
+                        </div>
+                    <li class="list-none inline-block px-5"><a href="" class="px-2">Documentation</a></li>
+                </ul>
+            </div>
+
+            <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/search-svgrepo-com.svg" alt="" class="w-6 h-6 p mr-8 mt-1" p>
+
+            <div>
+                <button class="list-none inline-block px-5 border-l-2 font-semibold text-m"> Sign in</button>       
+            </div>
+
+            <div class="bg-slate-950 h-10 inline-flex justify-center rounded-lg hover:bg-slate-700 -my-2.5 ml-8">
+                <a class="list-none inline-block px-5 font-semibold text-m text-white my-2 ml-2">Get all-acess</a>
+
+                <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/arrow-right-363-svgrepo-com.svg" alt="" class="w-4 h-4 mt-3.5 mr-4 pr-1 ml-0">
+            </div>
+           
+        </nav>
+    </header>
+        
+        <hr class="w-10/12 text-center mx-32"></hr>
+
+    
+    <div class="mt-20 ml-32">
+        <button><h6 class="text-slate-500 hover:text-slate-600">Ecommerce / Page Examples</h6></button>
+        <h1 class="mt-3 text-3xl font-extrabold text-slate-900">Product Pages</h1>
+    </div>
+
+    <div class="mt-10 ml-32 flex items-center justify-between ">
+        <h2 class="text-slate-900 font-medium">With related products</h2></button>
+        <p class="ml-3  rounded-lg bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-700">
+            Preview
+        </p>
+
+        <div class="ml-auto mr-28 flex">
+            <a href="" class="ml-6 text-sm font-semibold text-sky-500 hover:text-sky-600">Get the code</a>
+            <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/arrow-right-363-svgrepo-com%20(2).svg" alt="" class="w-3 h-3 mt-1.5 mr-2 ml-2 ">
+        </div>
+    </div>
+     -->
+<div style="font-family: 'Inter', sans-serif;" class="">
+    <div class="flex ml-4 mt-10 md:mt-10 lg:ml-32 lg:items-center lg:justify-between ">
+        <a href="" class="text-slate-900 font-medium md:font-semibold leading-7 text-m md:text-base ml-1 md:mr-0 md:hidden truncate w-48 mr-7">With expandable product details</a>
+        <a href="" class="text-slate-900 font-medium md:font-semibold leading-7 text-m md:text-base ml-1 md:mr-0 hidden md:block">With expandable product details</a>
+        <p class="ml-3 rounded-lg bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-700 hidden lg:block md:hidden">
+            Preview
+        </p>
+
+        <div class="mt-1 mr-4 md:ml-auto lg:mr-28 flex">
+            <a href="" class="md:ml-6 text-sm font-semibold text-sky-500 hover:text-sky-600">Get the code</a>
+            <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/arrow-right-363-svgrepo-com%20(2).svg" alt="" class="w-3 h-3 mt-1 mr-4 ml-1 md:ml-2 rounded">
+        </div>
+
+    </div>
+
+
+    <div class="border h-auto lg:w-10/12 lg:ml-auto mx-4 md:mx-5 lg:mx-auto mt-5 rounded-lg mb-14">
+        <header class="relative mb-4 mt-2">
+            <nav class="md:mx-auto md:px-4 px-2">
+                <div class="flex">
+                    <div class="md:flex lg:flex justify-evenly w-1/4 text-sm font-medium text-gray-700 mt-5 hidden md:hidden lg:block">
+                        <a href="">Women</a>
+                        <a href="">Men</a>
+                        <a href="">Company</a>
+                        <a href="">Stores</a>
+                    </div>
+
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/menu-svgrepo-com.svg" alt="" class="h-8 w-8 mt-2 lg:hidden">
+
+                    <div class="md:mx-52 lg:mx-72">
+                        <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/tailwind%20blue%20logo.svg" alt="" class="md:h-10 lg:w-10 h-7 w-87 mt-3 lg:mt-2 lg:ml-auto ml-24">
+                    </div>
+
+                    <div class="flex">
+                        <a>
+                            <div class="md:flex lg:flex hidden md:hidden lg:block" >
+                                <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/flag-canada.svg" class="mt-5">
+                                <a href="" class="text-semibold ml-3 mt-4 mr-2">CAD</a>
+                            </div>
+
+                            <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/search-svgrepo-com%20(2).svg" alt="" class="h-6 w-6 lg:mt-4 mt-3 md:ml-6 -ml-28 mr-32 md:mr-6 lg:ml-8 lg:mx-8">
+                            <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/person-male-svgrepo-com.svg" alt="" class="h-6 w-6 lg:mt-4 mt-3 lg:ml-2 lg:mx-6">
+
+                            <div class="flex">
+                                <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/shopping-bag-svgrepo-com.svg" alt="" class="h-6 w-6 mt-3 lg:mt-4 ml-5 mr-2">
+                                <p class=" mt-3 md:mt-4">0</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="flex flex-col lg:flex-row border-y md:mx-12 lg:mx-10">
+            <div class="lg:w-1/2">
+                <div class="">
+                    <img src="https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg" alt="" class="md:mt-16 w-full h-auto rounded-lg">
+                </div>
+
+                <div class="flex mt-6 rounded-lg hidden md:block md:flex">
+                    <img src="https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg" alt="" class="w-32 h-32 lg:mr-3 md:mr-8">
+
+                    <img src="https://tailwindui.com/img/ecommerce-images/product-page-03-product-02.jpg" alt="" class="w-32 h-32 lg:mx-3 md:mx-8">
+
+                    <img src="https://tailwindui.com/img/ecommerce-images/product-page-03-product-03.jpg" alt="" class="w-32 h-32 lg:mx-3 md:mx-8">
+
+                    <img src="https://tailwindui.com/img/ecommerce-images/product-page-03-product-04.jpg" alt="" class="w-32 h-32 lg:mx-3 md:mx-8">
+                </div>
+            </div>
+
+            <div class="flex-col lg:w-1/2 lg:ml-4">
+                <h1 class="mt-3 text-3xl font-bold text-slate-900 ml-4 pt-12">Zip Tote Basket</h1>
+                <h1 class="mt-3 text-3xl font-normal text-slate-900 ml-4 pt-12" style="margin-top: -35px;">$140</h1>
+               
+                <div class="flex justify-between w-24 ml-4 mt-4 mb-6">
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/star-svgrepo-com.svg" alt="" class="h-4 w-4">
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/star-svgrepo-com.svg" alt="" class="h-4 w-4">
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/star-svgrepo-com.svg" alt="" class="h-4 w-4">
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/star-svgrepo-com.svg" alt="" class="h-4 w-4">
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/star-svgrepo-com%20(3).svg" alt="" class="h-4 w-4">
+                </div>
+
+                <p class="ml-4 mt-3 text-base text-gray-700">The Zip Tote Basket is the perfect midpoint between shopping tote and comfy backpack. With convertible straps, you can hand carry, should sling, or backpack this convenient and spacious bag. The zip top and durable canvas construction keeps your goods protected for all-day use.</p>
+
+                <h1 class="text-slate-600 mt-8 ml-4 mb-2">Color</h1>
+ 
+                <div class="flex ml-2 justify-evenly w-36 border-sky-500">
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/circle-svgrepo-com.svg" alt="" class="h-10 w-10" style="border: 3px solid #374151; border-radius: 50px;">
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/circle-svgrepo-com%20(2).svg" alt="" class="h-10 w-10">
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/circle-svgrepo-com%20(1).svg" alt="" class="h-10 w-10">
+                </div>
+
+                <div class="flex">
+                    <div class="bg-indigo-600 hover:bg-indigo-700 ml-4 mt-8 w-80 h-12 inline-flex justify-center rounded-lg">
+                         <a href="" class="text-white text-lg font-semibold mt-2">Add to bag</a>
+                    </div>
+
+                    <div class="hover:bg-slate-100 flex text-center justify-center items-center w-12 h-12 ml-2 md:ml-4 mt-8 rounded-lg md:mr-auto mr-2">
+                        <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/heart-svgrepo-com.svg" alt="" class="h-7 w-7">
+                    </div>
+                </div>
+
+                <div class="flex-col ml-4 mt-14 text-gray-900 font-medium text-sm">
+
+                    <div class="flex border-y py-6">
+                        <a href="" class="">Features</a>
+                        <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/plus-svgrepo-com%20(2).svg" alt="" class="h-5 w-5 mt-0.5 ml-auto">
+                    </div>
+                    
+
+                    <div class="flex border-b py-6">
+                        <a href="">Care</a>
+                        <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/plus-svgrepo-com%20(2).svg" alt="" class="h-5 w-5 mt-0.5 ml-auto">
+                    </div>
+                    
+
+                    <div class="flex border-b py-6">
+                        <a href="">Shipping</a>
+                        <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/plus-svgrepo-com%20(2).svg" alt="" class="h-5 w-5 mt-0.5 ml-auto">
+                    </div>
+                    
+
+                    <div class="flex  pt-6 pb-16">
+                        <a href="">Returns</a>
+                        <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/plus-svgrepo-com%20(2).svg" alt="" class="h-5 w-5 mt-0.5 ml-auto">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lg:mx-10 md:ml-12 border-b md:mb-20 mb-14 mx-6">
+            <h1 class="mt-3 text-xl font-bold text-slate-900 pt-12">Customers also bought</h1>
+
+            <div class="flex lg:flex-row flex-col justify-evenly my-10">
+                <div class="flex md:flex-row flex-col">
+                    <div class="relative lg:mr-3 md:mr-10">
+                        <div class="w-full h-72 md:w-80 md:h-80 lg:h-72 lg:w-full relative truncate rounded-lg">
+                            <img src="https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg" alt="" class="object-cover object-center block w-full h-full">
+                        </div>
+                    
+                        <div>
+                            <h3 class="font-medium mt-4">Zip Tote Basket</h3>
+                            <p class="text-slate-600">White and black</p>
+                        </div>
+
+                        <div class="flex p-4 rounded-lg truncate justify-end items-end absolute h-72 md:h-80 lg:h-72 top-0 inset-x-0">
+                            <div class="opacity-50 absolute inset-x-0 bottom-0 h-36	bg-gradient-to-t from-black"></div>
+                            <p class="relative text-white text-xl font-semibold">$140</p>
+                        </div>
+
+                        <div class="bg-gray-100 hover:bg-gray-200 inline-flex justify-center rounded-lg my-8 w-full h-10">
+                            <a class="text-m font-medium mt-2">Add to bag</a>
+                        </div>
+                    </div>
+
+                    <div class="relative md:mx-3">
+                        <div class="w-full h-72 md:w-80 md:h-80 lg:h-72 lg:w-full relative truncate rounded-lg">
+                            <img src="https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-02.jpg" alt="" class="object-cover object-center block w-full h-full">
+                        </div>
+
+                        <div>
+                            <h3 class="font-medium mt-4">Zip High Wall Tote</h3>
+                            <p class="text-slate-600">White and blue</p>
+                        </div>
+
+                        <div class="flex p-4 rounded-lg truncate justify-end items-end absolute h-72 md:h-80 lg:h-72 top-0 inset-x-0">
+                            <div class="opacity-50 absolute inset-x-0 bottom-0 h-36	bg-gradient-to-t from-black"></div>
+                            <h1 class="text-white relative text-xl font-semibold">$150</h1>
+                        </div>    
+
+                        <div class="bg-gray-100 hover:bg-gray-200 inline-flex justify-center rounded-lg my-8 w-full h-10">
+                            <a class="text-m font-medium mt-2">Add to bag</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex md:flex-row flex-col">
+                    <div class="relative md:mx-3 md:mr-10 lg:mr-3">
+                        <div class="w-full h-72 md:w-80 md:h-80 lg:h-72 lg:w-full relative truncate rounded-lg">
+                            <img src="https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-03.jpg" alt="" class="object-cover object-center block w-full h-full">
+                        </div>
+                    
+                        <div>
+                            <h3 class="font-medium mt-4">Halfsize Tote</h3>
+                            <p class="text-slate-600">Clay</p>
+                        </div>
+
+                        <div class="flex p-4 rounded-lg truncate justify-end items-end absolute h-72 md:h-80 lg:h-72 top-0 inset-x-0">
+                            <div class="opacity-50 absolute inset-x-0 bottom-0 h-36	bg-gradient-to-t from-black	"></div>
+                            <h1 class="text-white relative text-xl font-semibold">$210</h1>
+                        </div>
+                    
+                        <div class="bg-gray-100 hover:bg-gray-200 inline-flex justify-center rounded-lg my-8 w-full h-10">
+                            <a class="text-m font-medium mt-2">Add to bag</a>
+                        </div>
+                    </div>
+
+                    <div class="relative md:mx-3">
+                        <div class="w-full h-72 md:w-80 md:h-80 lg:h-72 lg:w-full relative truncate rounded-lg">
+                            <img src="https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-04.jpg" alt="" class="object-cover object-center block w-full h-full">
+                        </div>
+                    
+                        <div>
+                            <h3 class="font-medium mt-4">High Wall Tote</h3>
+                            <p class="text-slate-600">Black and Orange</p>
+                        </div>
+                    
+                        <div class="flex p-4 rounded-lg truncate justify-end items-end absolute h-72 md:h-80 lg:h-72 top-0 inset-x-0">
+                            <div class="opacity-50 absolute inset-x-0 bottom-0 h-36	bg-gradient-to-t from-black"></div>
+                            <h1 class="text-white relative text-xl font-semibold">$210</h1>
+                        </div>
+
+                        <div class="bg-gray-100 hover:bg-gray-200 inline-flex justify-center rounded-lg my-8 w-full h-10">
+                            <a class="text-m font-medium mt-2">Add to bag</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lg:flex-row flex flex-col border-b mb-10 md:mx-12 lg:mx-10 pb-14">
+     
+            <div class="md:flex inline-grid md:mb-auto mb-10">
+                <div>
+                    <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/tailwind%20blue%20logo.svg" alt="" class="md:h-10 md:w-10 md:mt-2 md:ml-auto ml-4 mb-8 md:mb-auto h-9 w-9">
+                </div>
+
+                <div class="flex">
+                    <div class=" flex flex-col font-medium md:mx-14 ml-4 mr-10">
+                        <h4 class="font-medium text-sm leading-5">Products</h4>
+                        <ul class="list-none text-sm">
+                            <li class="my-6"><a href="" class="text-gray-500">Bags</a></li>
+                            <li class="my-6"><a href="" class="text-gray-500">Tees</a></li>
+                            <li class="my-6"><a href="" class="text-gray-500">Objects</a></li>
+                            <li class="my-6"><a href="" class="text-gray-500">Home Goods</a></li>
+                            <li class="my-6"><a href="" class="text-gray-500">Accessories</a></li>
+                        </ul>
+                    </div>
+
+                    <div class=" flex flex-col font-mediumt md:mx-14 mx-4">
+                        <h4 class="font-medium text-sm leading-5'"">Company</h4>
+                        <ul class="list-none text-sm">
+                            <li class="my-6"><a href="" class="text-gray-500">Who we are</a></li>
+                            <li class="my-6"><a href="" class="text-gray-500">Sustainability</a></li>
+                            <li class="my-6"><a href="" class="text-gray-500">Press</a></li>
+                            <li class="my-6"><a href="" class="text-gray-500">Careers</a></li>
+                            <li class="my-6"><a href="" class="text-gray-500">Terms and Conditions</a></li>
+                            <li class="my-6"><a href="" class="text-gray-500">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class=" flex flex-col font-medium md:ml-7 ml-4">
+                    <h4 class="font-medium	text-sm font-medium leading-5" >Customer Service</h4>
+                    <ul class="list-none text-sm"> 
+                        <li class="my-6"><a href="" class="text-gray-500">Contact</a></li>
+                        <li class="my-6"><a href="" class="text-gray-500">Shipping</a></li>
+                        <li class="my-6"><a href="" class="text-gray-500">Returns</a></li>
+                        <li class="my-6"><a href="" class="text-gray-500">Warranty</a></li>
+                        <li class="my-6"><a href="" class="text-gray-500">Secure Payments</a></li>
+                        <li class="my-6"><a href="" class="text-gray-500">FAQ</a></li>
+                        <li class="my-6"><a href="" class="text-gray-500">Find a store</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="md:ml-40 md:mr-auto mx-4 md:mb-auto mb-8">
+                <h3 class="font-medium text-sm font-medium leading-5 mb-6">Sign up for our newsletter</h3>
+                <p class="text-gray-500 text-sm md:font-medium md:text-medium"> The latest deals and savings, sent to your inbox weekly.</p>
+                
+                <div class="flex">
+                    <input type="text" class="border-2 border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                    focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 px-2 py-2 h-10 md:w-72 w-56 mt-3">
+                    <div class="bg-indigo-600 hover:bg-indigo-700 inline-flex justify-center rounded-lg h-10 w-24 ml-4 mt-3">
+                        <button class="text-white text-m font-medium">Sign up</button>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+
+        <div class="flex justify-center my-10">
+            <img src="file:///C:/Users/Inazawa%20Electronics/Downloads/copyright-svgrepo-com.svg" alt="" class="h-3 w-3 mt-1 mr-1">
+            <p class="text-gray-500	text-sm ml">2021 Your Company, Inc. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
