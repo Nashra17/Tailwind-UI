@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Barlow Condensed", sans-serif;
+    color: white;
+    background: radial-gradient(
+      134.34% 134.34% at 50% 0%,
+      #1f3757 0%,
+      #131537 100%
+    );
+    width: 100vw;
+    height: 100vh;
+    padding-top: 30px;
+  }
+  
+  .content {
+    margin-top: 100px;
+    border: 0px solid;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 50px;
+    align-items: center;
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    .content {
+      width: 50vw;
+      height: 90vh;
+      box-shadow: 0 14px 18px 8px rgba(0, 0, 0, 0.2),
+        0 16px 20px 10px rgba(0, 0, 0, 0.19);
+    }
+  }
+  
+  #rock,
+  #paper,
+  #scissors {
+    width: 110px;
+    height: 110px;
+  }
+  
+  @media only screen and (max-width: 520px) {
+    #rock,
+    #paper,
+    #scissors {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  .rock,
+  .paper,
+  .scissors {
+    border: 0;
+  }
+  
+  .scores {
+    display: flex;
+    border: 2px solid;
+    border-radius: 15px;
+    align-items: center;
+    margin-top: 45px;
+  }
+  
+  .titlebox {
+    margin-top: 20px;
+  }
+  
+  #title {
+    font-size: 250%;
+  }
+  
+  .images {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .computer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 250px;
+    height: 50px;
+    padding-top: 5px;
+    font-size: 140%;
+    font-weight: 600;
+  }
+  
+  .player {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 250px;
+    height: 50px;
+    padding-top: 5px;
+    border-left: 2px solid;
+    font-size: 140%;
+    font-weight: 600;
+  }
+  
+  #message {
+    color: rgb(255, 255, 255);
+    font-size: 170%;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
